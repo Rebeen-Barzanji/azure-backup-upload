@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "enabled": true,
+      "name": "delete-weekly-backups-after-42-days",
+      "type": "Lifecycle",
+      "definition": {
+        "actions": {
+          "baseBlob": {
+            "delete": { "daysAfterModificationGreaterThan": 42 }
+          }
+        },
+        "filters": {
+          "blobTypes": [ "blockBlob" ],
+          "prefixMatch": [ "weekly-backups/" ]
+        }
+      }
+    }
+  ]
+}

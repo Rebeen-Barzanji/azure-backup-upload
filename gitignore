@@ -1,0 +1,5 @@
+# Never commit secrets or logs
+*.log
+*.sas
+*.secret
+.env
